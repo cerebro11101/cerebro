@@ -1,21 +1,23 @@
 {
-  "name": "cerebro",
-  "version": "1.0.0",
-  "keywords": "cerebro, Cerebro, Brain, brain, arduino",
-  "description": "A library for cerebro robot",
-  "repository":
-  {
-    "type": "git",
-    "url": "https://github.com/cerebro11101/cerebro"
-  },
-  "authors":
-  [
-    {
-        "name": "Epsilon",
-        "email": "epsilon11101@gmail.com",
-        "maintainer": true
-    }
+  "name": "Cerebro",
+  "description": "A library that makes use of Cerebro robot.",
+  "keywords": "cerebro,Cerebro,robot",
+  "authors": [
+      {
+          "name": "Aaron Miranda",
+          "url": "https://github.com/cerebro11101",
+          "maintainer": true
+      }
   ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/cerebro11101/cerebro"
+  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/cerebro11101/cerebro/wiki",
   "frameworks": "arduino",
   "platforms": "*"
 }
+
+
