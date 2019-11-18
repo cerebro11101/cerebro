@@ -1,8 +1,5 @@
 cerebro	KEYWORD1
 Cerebro	KEYWORD1
-M1	LITERAL1
-M2	LITERAL1
-piano_sound	KEYWORD2
 CerebroInit	KEYWORD2
 Melody	KEYWORD2
 AnguloServo	KEYWORD2
@@ -14,6 +11,9 @@ lightSensor	KEYWORD2
 moveMotor	KEYWORD2
 moveTank	KEYWORD2
 getDistance	KEYWORD2
+piano_sound	LITERAL1
+M1	LITERAL1
+M2	LITERAL1
 Red	LITERAL1
 Blue	LITERAL1
 Green	LITERAL1	
