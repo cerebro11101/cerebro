@@ -1,0 +1,401 @@
+\hypertarget{cerebro_8h}{}\doxysection{cerebro.\+h File Reference}
+\label{cerebro_8h}\index{cerebro.h@{cerebro.h}}
+
+
+Libreria para el control del kit educativo C\+E\+R\+E\+B\+RO.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Servo.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_cerebro}{Cerebro}}
+\begin{DoxyCompactList}\small\item\em Definiciones de metodos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cerebro_8h_ae063708dcb4d38cf311edf254f63e333}{buzzer}}~4
+\begin{DoxyCompactList}\small\item\em Métodos y variables privad@s. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cerebro_8h_ac1922f2b035c7e4dbaec60873bc46e1b}\label{cerebro_8h_ac1922f2b035c7e4dbaec60873bc46e1b}} 
+\#define {\bfseries servo}~5
+\item 
+\mbox{\Hypertarget{cerebro_8h_a60e32268c89e223a4ceba83202856138}\label{cerebro_8h_a60e32268c89e223a4ceba83202856138}} 
+\#define {\bfseries trig}~8
+\item 
+\mbox{\Hypertarget{cerebro_8h_a428d6db729f3d323f4cae4d6f51c15cc}\label{cerebro_8h_a428d6db729f3d323f4cae4d6f51c15cc}} 
+\#define {\bfseries echo}~13
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{cerebro_8h_ab4ee4bde980695447952da7a033b5fb8}{piano\+\_\+sound}} \{ \newline
+{\bfseries \+\_\+\+B0} =31, 
+{\bfseries \+\_\+\+C1} =33, 
+{\bfseries \+\_\+\+C\+S1} =35, 
+{\bfseries \+\_\+\+D1} =37, 
+\newline
+{\bfseries \+\_\+\+D\+S1} =39, 
+{\bfseries \+\_\+\+E1} =41, 
+{\bfseries \+\_\+\+F1} =44, 
+{\bfseries \+\_\+\+F\+S1} =46, 
+\newline
+{\bfseries \+\_\+\+G1} =49, 
+{\bfseries \+\_\+\+G\+S1} =52, 
+{\bfseries \+\_\+\+A1} =55, 
+{\bfseries \+\_\+\+A\+S1} =58, 
+\newline
+{\bfseries \+\_\+\+B1} =62, 
+{\bfseries \+\_\+\+C2} =65, 
+{\bfseries \+\_\+\+C\+S2} =69, 
+{\bfseries \+\_\+\+D2} =73, 
+\newline
+{\bfseries \+\_\+\+D\+S2} =78, 
+{\bfseries \+\_\+\+E2} =82, 
+{\bfseries \+\_\+\+F2} =87, 
+{\bfseries \+\_\+\+F\+S2} =93, 
+\newline
+{\bfseries \+\_\+\+G2} =98, 
+{\bfseries \+\_\+\+G\+S2} =104, 
+{\bfseries \+\_\+\+A2} =110, 
+{\bfseries \+\_\+\+A\+S2} =117, 
+\newline
+{\bfseries \+\_\+\+B2} =123, 
+{\bfseries \+\_\+\+C3} =131, 
+{\bfseries \+\_\+\+C\+S3} =139, 
+{\bfseries \+\_\+\+D3} =147, 
+\newline
+{\bfseries \+\_\+\+D\+S3} =156, 
+{\bfseries \+\_\+\+E3} =165, 
+{\bfseries \+\_\+\+F3} =175, 
+{\bfseries \+\_\+\+F\+S3} =185, 
+\newline
+{\bfseries \+\_\+\+G3} =196, 
+{\bfseries \+\_\+\+G\+S3} =208, 
+{\bfseries \+\_\+\+A3} =220, 
+{\bfseries \+\_\+\+A\+S3} =233, 
+\newline
+{\bfseries \+\_\+\+B3} =247, 
+{\bfseries \+\_\+\+C4} =262, 
+{\bfseries \+\_\+\+C\+S4} =277, 
+{\bfseries \+\_\+\+D4} =294, 
+\newline
+{\bfseries \+\_\+\+D\+S4} =311, 
+{\bfseries \+\_\+\+E4} =330, 
+{\bfseries \+\_\+\+F4} =349, 
+{\bfseries \+\_\+\+F\+S4} =370, 
+\newline
+{\bfseries \+\_\+\+G4} =392, 
+{\bfseries \+\_\+\+G\+S4} =415, 
+{\bfseries \+\_\+\+A4} =440, 
+{\bfseries \+\_\+\+A\+S4} =466, 
+\newline
+{\bfseries \+\_\+\+B4} =494, 
+{\bfseries \+\_\+\+C5} =523, 
+{\bfseries \+\_\+\+C\+S5} =554, 
+{\bfseries \+\_\+\+D5} =587, 
+\newline
+{\bfseries \+\_\+\+D\+S5} =622, 
+{\bfseries \+\_\+\+E5} =659, 
+{\bfseries \+\_\+\+F5} =698, 
+{\bfseries \+\_\+\+F\+S5} =740, 
+\newline
+{\bfseries \+\_\+\+G5} =784, 
+{\bfseries \+\_\+\+G\+S5} =831, 
+{\bfseries \+\_\+\+A5} =880, 
+{\bfseries \+\_\+\+A\+S5} =932, 
+\newline
+{\bfseries \+\_\+\+B5} =988, 
+{\bfseries \+\_\+\+C6} =1047, 
+{\bfseries \+\_\+\+C\+S6} =1109, 
+{\bfseries \+\_\+\+D6} =1175, 
+\newline
+{\bfseries \+\_\+\+D\+S6} =1245, 
+{\bfseries \+\_\+\+E6} =1319, 
+{\bfseries \+\_\+\+F6} =1397, 
+{\bfseries \+\_\+\+F\+S6} =1480, 
+\newline
+{\bfseries \+\_\+\+G6} =1568, 
+{\bfseries \+\_\+\+G\+S6} =1661, 
+{\bfseries \+\_\+\+A6} =1760, 
+{\bfseries \+\_\+\+A\+S6} =1865, 
+\newline
+{\bfseries \+\_\+\+B6} =1976, 
+{\bfseries \+\_\+\+C7} =2093, 
+{\bfseries \+\_\+\+C\+S7} =2217, 
+{\bfseries \+\_\+\+D7} =2349, 
+\newline
+{\bfseries \+\_\+\+D\+S7} =2489, 
+{\bfseries \+\_\+\+E7} =2637, 
+{\bfseries \+\_\+\+F7} =2794, 
+{\bfseries \+\_\+\+F\+S7} =2960, 
+\newline
+{\bfseries \+\_\+\+G7} =3136, 
+{\bfseries \+\_\+\+G\+S7} =3322, 
+{\bfseries \+\_\+\+A7} =3520, 
+{\bfseries \+\_\+\+A\+S7} =3729, 
+\newline
+{\bfseries \+\_\+\+B7} =3951, 
+{\bfseries \+\_\+\+C8} =4186, 
+{\bfseries \+\_\+\+C\+S8} =4435, 
+{\bfseries \+\_\+\+D8} =4699, 
+\newline
+{\bfseries \+\_\+\+D\+S8} =4978
+ \}
+\begin{DoxyCompactList}\small\item\em enum piano\+\_\+sound sonidos definidos para ser reproducidos \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{cerebro_8h_a058819ab74dd58da046f0ff682ac9c71}{rgb\+\_\+color}} \{ \newline
+{\bfseries Red} = 0x\+F\+F0000, 
+{\bfseries Blue} = 0x0000\+FF, 
+{\bfseries Green} = 0x00\+F\+F00, 
+{\bfseries Orange} = 0x\+F\+F7\+D00, 
+\newline
+{\bfseries Yellow} = 0x\+F\+F\+F\+F00, 
+{\bfseries Spring\+Green} = 0x7\+D\+F\+F00, 
+{\bfseries Turquoise} = 0x00\+F\+F7D, 
+{\bfseries Cyan} = 0x00\+F\+F\+FF, 
+\newline
+{\bfseries Ocean} = 0x007\+D\+FF, 
+{\bfseries Violet} = 0X7\+F00\+FF, 
+{\bfseries Magenta} = 0x\+F\+F00\+FF, 
+{\bfseries Raspberry} = 0x\+F\+F007D
+ \}
+\begin{DoxyCompactList}\small\item\em rgb\+\_\+color colores definidos para el facil uso del R\+GB \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{cerebro_8h_a2cd9a3bc9704bd057232711cd8a3ed19}{motor\+\_\+direction}} \{ \newline
+{\bfseries Forward} = 1, 
+{\bfseries Backward} = 2, 
+{\bfseries Stop} = 3, 
+{\bfseries Left} = 4, 
+\newline
+{\bfseries Right} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em motor\+\_\+direction Direcciones definidas para el movimiento del robot \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{cerebro_8h_a770f026207c141e801703c7149638a2e}{\+\_\+motor}} \{ {\bfseries M1} = 1, 
+{\bfseries M2} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em \+\_\+motor Seleccion del motor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Libreria para el control del kit educativo C\+E\+R\+E\+B\+RO. 
+
+\begin{DoxyAuthor}{Author}
+Aarón Miranda (\href{mailto:epsilon11101@gmail.com}{\texttt{ epsilon11101@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/11-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cerebro_8h_ae063708dcb4d38cf311edf254f63e333}\label{cerebro_8h_ae063708dcb4d38cf311edf254f63e333}} 
+\index{cerebro.h@{cerebro.h}!buzzer@{buzzer}}
+\index{buzzer@{buzzer}!cerebro.h@{cerebro.h}}
+\doxysubsubsection{\texorpdfstring{buzzer}{buzzer}}
+{\footnotesize\ttfamily \#define buzzer~4}
+
+
+
+Métodos y variables privad@s. 
+
+
+
+Definition at line 185 of file cerebro.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{cerebro_8h_a770f026207c141e801703c7149638a2e}\label{cerebro_8h_a770f026207c141e801703c7149638a2e}} 
+\index{cerebro.h@{cerebro.h}!\_motor@{\_motor}}
+\index{\_motor@{\_motor}!cerebro.h@{cerebro.h}}
+\doxysubsubsection{\texorpdfstring{\_motor}{\_motor}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{cerebro_8h_a770f026207c141e801703c7149638a2e}{\+\_\+motor}}}
+
+
+
+\+\_\+motor Seleccion del motor 
+
+
+
+Definition at line 145 of file cerebro.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145            \{}
+\DoxyCodeLine{146     M1 = 1,}
+\DoxyCodeLine{147     M2 = 2}
+\DoxyCodeLine{148 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cerebro_8h_a2cd9a3bc9704bd057232711cd8a3ed19}\label{cerebro_8h_a2cd9a3bc9704bd057232711cd8a3ed19}} 
+\index{cerebro.h@{cerebro.h}!motor\_direction@{motor\_direction}}
+\index{motor\_direction@{motor\_direction}!cerebro.h@{cerebro.h}}
+\doxysubsubsection{\texorpdfstring{motor\_direction}{motor\_direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{cerebro_8h_a2cd9a3bc9704bd057232711cd8a3ed19}{motor\+\_\+direction}}}
+
+
+
+motor\+\_\+direction Direcciones definidas para el movimiento del robot 
+
+
+
+Definition at line 133 of file cerebro.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                     \{}
+\DoxyCodeLine{134     Forward = 1,}
+\DoxyCodeLine{135     Backward = 2,}
+\DoxyCodeLine{136     Stop = 3,}
+\DoxyCodeLine{137     Left = 4,}
+\DoxyCodeLine{138     Right = 5}
+\DoxyCodeLine{139     }
+\DoxyCodeLine{140 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cerebro_8h_ab4ee4bde980695447952da7a033b5fb8}\label{cerebro_8h_ab4ee4bde980695447952da7a033b5fb8}} 
+\index{cerebro.h@{cerebro.h}!piano\_sound@{piano\_sound}}
+\index{piano\_sound@{piano\_sound}!cerebro.h@{cerebro.h}}
+\doxysubsubsection{\texorpdfstring{piano\_sound}{piano\_sound}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{cerebro_8h_ab4ee4bde980695447952da7a033b5fb8}{piano\+\_\+sound}}}
+
+
+
+enum piano\+\_\+sound sonidos definidos para ser reproducidos 
+
+
+
+Definition at line 20 of file cerebro.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                 \{}
+\DoxyCodeLine{21   \_B0  =31,}
+\DoxyCodeLine{22   \_C1  =33,}
+\DoxyCodeLine{23   \_CS1 =35,}
+\DoxyCodeLine{24   \_D1  =37,}
+\DoxyCodeLine{25   \_DS1 =39,}
+\DoxyCodeLine{26   \_E1  =41,}
+\DoxyCodeLine{27   \_F1  =44,}
+\DoxyCodeLine{28   \_FS1 =46,}
+\DoxyCodeLine{29   \_G1  =49,}
+\DoxyCodeLine{30   \_GS1 =52,}
+\DoxyCodeLine{31   \_A1  =55,}
+\DoxyCodeLine{32   \_AS1 =58,}
+\DoxyCodeLine{33   \_B1  =62,}
+\DoxyCodeLine{34   \_C2  =65,}
+\DoxyCodeLine{35   \_CS2 =69,}
+\DoxyCodeLine{36   \_D2  =73,}
+\DoxyCodeLine{37   \_DS2 =78,}
+\DoxyCodeLine{38   \_E2  =82,}
+\DoxyCodeLine{39   \_F2  =87,}
+\DoxyCodeLine{40   \_FS2 =93,}
+\DoxyCodeLine{41   \_G2  =98,}
+\DoxyCodeLine{42   \_GS2 =104,}
+\DoxyCodeLine{43   \_A2  =110,}
+\DoxyCodeLine{44   \_AS2 =117,}
+\DoxyCodeLine{45   \_B2  =123,}
+\DoxyCodeLine{46   \_C3  =131,}
+\DoxyCodeLine{47   \_CS3 =139,}
+\DoxyCodeLine{48   \_D3  =147,}
+\DoxyCodeLine{49   \_DS3 =156,}
+\DoxyCodeLine{50   \_E3  =165,}
+\DoxyCodeLine{51   \_F3  =175,}
+\DoxyCodeLine{52   \_FS3 =185,}
+\DoxyCodeLine{53   \_G3  =196,}
+\DoxyCodeLine{54   \_GS3 =208,}
+\DoxyCodeLine{55   \_A3  =220,}
+\DoxyCodeLine{56   \_AS3 =233,}
+\DoxyCodeLine{57   \_B3  =247,}
+\DoxyCodeLine{58   \_C4  =262,}
+\DoxyCodeLine{59   \_CS4 =277,}
+\DoxyCodeLine{60   \_D4  =294,}
+\DoxyCodeLine{61   \_DS4 =311,}
+\DoxyCodeLine{62   \_E4  =330,}
+\DoxyCodeLine{63   \_F4  =349,}
+\DoxyCodeLine{64   \_FS4 =370,}
+\DoxyCodeLine{65   \_G4  =392,}
+\DoxyCodeLine{66   \_GS4 =415,}
+\DoxyCodeLine{67   \_A4  =440,}
+\DoxyCodeLine{68   \_AS4 =466,}
+\DoxyCodeLine{69   \_B4  =494,}
+\DoxyCodeLine{70   \_C5  =523,}
+\DoxyCodeLine{71   \_CS5 =554,}
+\DoxyCodeLine{72   \_D5  =587,}
+\DoxyCodeLine{73   \_DS5 =622,}
+\DoxyCodeLine{74   \_E5  =659,}
+\DoxyCodeLine{75   \_F5  =698,}
+\DoxyCodeLine{76   \_FS5 =740,}
+\DoxyCodeLine{77   \_G5  =784,}
+\DoxyCodeLine{78   \_GS5 =831,}
+\DoxyCodeLine{79   \_A5  =880,}
+\DoxyCodeLine{80   \_AS5 =932,}
+\DoxyCodeLine{81   \_B5  =988,}
+\DoxyCodeLine{82   \_C6  =1047,}
+\DoxyCodeLine{83   \_CS6 =1109,}
+\DoxyCodeLine{84   \_D6  =1175,}
+\DoxyCodeLine{85   \_DS6 =1245,}
+\DoxyCodeLine{86   \_E6  =1319,}
+\DoxyCodeLine{87   \_F6  =1397,}
+\DoxyCodeLine{88   \_FS6 =1480,}
+\DoxyCodeLine{89   \_G6  =1568,}
+\DoxyCodeLine{90   \_GS6 =1661,}
+\DoxyCodeLine{91   \_A6  =1760,}
+\DoxyCodeLine{92   \_AS6 =1865,}
+\DoxyCodeLine{93   \_B6  =1976,}
+\DoxyCodeLine{94   \_C7  =2093,}
+\DoxyCodeLine{95   \_CS7 =2217,}
+\DoxyCodeLine{96   \_D7  =2349,}
+\DoxyCodeLine{97   \_DS7 =2489,}
+\DoxyCodeLine{98   \_E7  =2637,}
+\DoxyCodeLine{99   \_F7  =2794,}
+\DoxyCodeLine{100   \_FS7 =2960,}
+\DoxyCodeLine{101   \_G7  =3136,}
+\DoxyCodeLine{102   \_GS7 =3322,}
+\DoxyCodeLine{103   \_A7  =3520,}
+\DoxyCodeLine{104   \_AS7 =3729,}
+\DoxyCodeLine{105   \_B7  =3951,}
+\DoxyCodeLine{106   \_C8  =4186,}
+\DoxyCodeLine{107   \_CS8 =4435,}
+\DoxyCodeLine{108   \_D8  =4699,}
+\DoxyCodeLine{109   \_DS8 =4978}
+\DoxyCodeLine{110 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cerebro_8h_a058819ab74dd58da046f0ff682ac9c71}\label{cerebro_8h_a058819ab74dd58da046f0ff682ac9c71}} 
+\index{cerebro.h@{cerebro.h}!rgb\_color@{rgb\_color}}
+\index{rgb\_color@{rgb\_color}!cerebro.h@{cerebro.h}}
+\doxysubsubsection{\texorpdfstring{rgb\_color}{rgb\_color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{cerebro_8h_a058819ab74dd58da046f0ff682ac9c71}{rgb\+\_\+color}}}
+
+
+
+rgb\+\_\+color colores definidos para el facil uso del R\+GB 
+
+
+
+Definition at line 115 of file cerebro.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115               \{}
+\DoxyCodeLine{116     Red = 0xFF0000,}
+\DoxyCodeLine{117     Blue = 0x0000FF,}
+\DoxyCodeLine{118     Green = 0x00FF00,}
+\DoxyCodeLine{119     Orange = 0xFF7D00,}
+\DoxyCodeLine{120     Yellow = 0xFFFF00,}
+\DoxyCodeLine{121     SpringGreen = 0x7DFF00,}
+\DoxyCodeLine{122     Turquoise = 0x00FF7D,}
+\DoxyCodeLine{123     Cyan = 0x00FFFF,}
+\DoxyCodeLine{124     Ocean = 0x007DFF,}
+\DoxyCodeLine{125     Violet = 0X7F00FF,}
+\DoxyCodeLine{126     Magenta = 0xFF00FF,}
+\DoxyCodeLine{127     Raspberry = 0xFF007D}
+\DoxyCodeLine{128 \};}
+
+\end{DoxyCode}

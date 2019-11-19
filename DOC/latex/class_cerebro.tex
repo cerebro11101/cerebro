@@ -1,0 +1,754 @@
+\hypertarget{class_cerebro}{}\doxysection{Cerebro Class Reference}
+\label{class_cerebro}\index{Cerebro@{Cerebro}}
+
+
+Definiciones de metodos.  
+
+
+
+
+{\ttfamily \#include $<$cerebro.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cerebro_ac7b1667c9c5a13a79ea75d48a68c1c29}{Cerebro}} ()
+\begin{DoxyCompactList}\small\item\em Metodos públicos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cerebro_a41e4dd41a5d1bb17cf30cb2dfb5da7b5}{$\sim$\+Cerebro}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_cerebro}{Cerebro}}\+:\+: \mbox{\hyperlink{class_cerebro}{Cerebro}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a6006422a003beb53dd25de5c4adb895b}{Cerebro\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa todos los componentes de arduino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a5871c686e15acba38cb4fe9276394992}{Melody}} (\mbox{\hyperlink{cerebro_8h_ab4ee4bde980695447952da7a033b5fb8}{piano\+\_\+sound}} $\ast$melody, int $\ast$sound\+Time, int size)
+\begin{DoxyCompactList}\small\item\em Funcion para reproducir n cantidad de sonidos en n determinado tiempo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a5e9a4d8bb0c6318c194819f2949b8fed}{Melody}} (\mbox{\hyperlink{cerebro_8h_ab4ee4bde980695447952da7a033b5fb8}{piano\+\_\+sound}} melody, uint16\+\_\+t sound\+Time)
+\begin{DoxyCompactList}\small\item\em Reproduce un solo sonido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_ab11f31244fbcbd05eb8aba9eb7fc8e81}{Stop\+Melody}} ()
+\begin{DoxyCompactList}\small\item\em Detiene el sonido (silenciar) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a0ad8a4c8e40e6d2aac54606869575ae8}{Angulo\+Servo}} (int angulo, uint32\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Mueve el servomotor en un determinado angulo y tiempo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a1f6a62be8a04c991d3d4d320f34a64cb}{Servo\+Radar}} (uint32\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Mueve el servomotor en angulo de 0 a 180 y de 180 a 0 en un determinado tiempo. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_cerebro_ae8eb2734e7793d3ad9a340fcb50e9f77}{Button\+State}} (char Whichbutton)
+\begin{DoxyCompactList}\small\item\em Lee el estado actual del boton. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_cerebro_a1275182123b87b4d90572ea92b33f41e}{Button\+State}} ()
+\begin{DoxyCompactList}\small\item\em Realiza la lectura de los dos botones. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_cerebro_a0f87a7f70088bb5ef7f4eadcb792c9fb}{line\+Sensor}} (char Which\+Sensor)
+\begin{DoxyCompactList}\small\item\em Realiza la lectura de un sensor de seguidor de linea. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_cerebro_af3ca7b007eb2a1c771787a4d54463a1b}{line\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Realiza la lectura de los dos sensores de seguidor de linea. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a184a949a6beb58d09c4f564cdcdab995}{R\+G\+Bcolor}} (byte r, byte g, byte b, uint16\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Crea un color especifico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a6444ccaed9ab75b62e66afe248dc4909}{R\+G\+Bcolor}} (\mbox{\hyperlink{cerebro_8h_a058819ab74dd58da046f0ff682ac9c71}{rgb\+\_\+color}} hex\+\_\+\+R\+GB, uint16\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Utiliza colores que definimos para ti Blue,Red, etc... \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cerebro_a93dfcfd5ed57f573a5ad24c662779a2c}{light\+Sensor}} (char Which\+Sensor)
+\begin{DoxyCompactList}\small\item\em Retorna el valor del sensor L\+DR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a39af91c3afd1a02dff2a74cc18b322a0}{move\+Motor}} (\mbox{\hyperlink{cerebro_8h_a770f026207c141e801703c7149638a2e}{\+\_\+motor}} Motor, \mbox{\hyperlink{cerebro_8h_a2cd9a3bc9704bd057232711cd8a3ed19}{motor\+\_\+direction}} Direction, uint32\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Mueve un solo motor a la dirección especificada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cerebro_a9e7975af84b48b0cb000b25e3e43ec5b}{move\+Tank}} (\mbox{\hyperlink{cerebro_8h_a2cd9a3bc9704bd057232711cd8a3ed19}{motor\+\_\+direction}} Direction, uint32\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Mueve los dos motores de \mbox{\hyperlink{class_cerebro}{Cerebro}} a la dirección especificada. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_cerebro_a82638032be433406d5715dd515826011}{get\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em Calcula la distancia del sensor ultrasonico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definiciones de metodos. 
+
+
+
+Definition at line 153 of file cerebro.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cerebro_ac7b1667c9c5a13a79ea75d48a68c1c29}\label{class_cerebro_ac7b1667c9c5a13a79ea75d48a68c1c29}} 
+\index{Cerebro@{Cerebro}!Cerebro@{Cerebro}}
+\index{Cerebro@{Cerebro}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{Cerebro()}{Cerebro()}}
+{\footnotesize\ttfamily Cerebro\+::\+Cerebro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodos públicos. 
+
+Construct a new \mbox{\hyperlink{class_cerebro}{Cerebro}}\+:\+: \mbox{\hyperlink{class_cerebro}{Cerebro}} object.
+
+Definition at line 19 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a41e4dd41a5d1bb17cf30cb2dfb5da7b5}\label{class_cerebro_a41e4dd41a5d1bb17cf30cb2dfb5da7b5}} 
+\index{Cerebro@{Cerebro}!````~Cerebro@{$\sim$Cerebro}}
+\index{````~Cerebro@{$\sim$Cerebro}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{$\sim$Cerebro()}{~Cerebro()}}
+{\footnotesize\ttfamily Cerebro\+::$\sim$\+Cerebro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the \mbox{\hyperlink{class_cerebro}{Cerebro}}\+:\+: \mbox{\hyperlink{class_cerebro}{Cerebro}} object. 
+
+
+
+Definition at line 24 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cerebro_a0ad8a4c8e40e6d2aac54606869575ae8}\label{class_cerebro_a0ad8a4c8e40e6d2aac54606869575ae8}} 
+\index{Cerebro@{Cerebro}!AnguloServo@{AnguloServo}}
+\index{AnguloServo@{AnguloServo}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{AnguloServo()}{AnguloServo()}}
+{\footnotesize\ttfamily void Cerebro\+::\+Angulo\+Servo (\begin{DoxyParamCaption}\item[{int}]{angulo,  }\item[{uint32\+\_\+t}]{time }\end{DoxyParamCaption})}
+
+
+
+Mueve el servomotor en un determinado angulo y tiempo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angulo} & Angulo al cual el servomotor debe de moverse \\
+\hline
+{\em time} & Tiempo en el cual el servomotor permanecera en la posición indicada \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97 \{}
+\DoxyCodeLine{98     \textcolor{keywordflow}{if} (angulo <= 180 \&\& angulo >= 0)}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         m\_servo.write(angulo);}
+\DoxyCodeLine{101         delay(time);}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{104     \{}
+\DoxyCodeLine{105         Serial.println(F(\textcolor{stringliteral}{"WARNING: ANGLES MUST BE IN THE INTERVAL OF  0-\/180 DEGREES"}));}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a1275182123b87b4d90572ea92b33f41e}\label{class_cerebro_a1275182123b87b4d90572ea92b33f41e}} 
+\index{Cerebro@{Cerebro}!ButtonState@{ButtonState}}
+\index{ButtonState@{ButtonState}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{ButtonState()}{ButtonState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily byte Cerebro\+::\+Button\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Realiza la lectura de los dos botones. 
+
+\begin{DoxyReturn}{Returns}
+byte Retorna el estado de los 2 botones 
+\end{DoxyReturn}
+
+
+Definition at line 148 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{149 \{}
+\DoxyCodeLine{150     \textcolor{keywordtype}{byte} leftState = PIND \& B00000100;}
+\DoxyCodeLine{151     \textcolor{keywordtype}{byte} rightState = PIND \& B00001000;}
+\DoxyCodeLine{152     \textcolor{keywordflow}{if} (leftState \&\& rightState)}
+\DoxyCodeLine{153     \{}
+\DoxyCodeLine{154         Serial.println(F(\textcolor{stringliteral}{"LEFT AND RIGHT BUTTON'S PRESSED"}));}
+\DoxyCodeLine{155         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{156     \}}
+\DoxyCodeLine{157     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (leftState \&\& !rightState)}
+\DoxyCodeLine{158     \{}
+\DoxyCodeLine{159         Serial.println(F(\textcolor{stringliteral}{"LEFT  BUTTON PRESSED \&\& RIGHT BUTTON RELEASED"}));}
+\DoxyCodeLine{160         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{161     \}}
+\DoxyCodeLine{162     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!leftState \&\& rightState)}
+\DoxyCodeLine{163     \{}
+\DoxyCodeLine{164         Serial.println(F(\textcolor{stringliteral}{"RIGHT  BUTTON PRESSED \&\& LEFT BUTTON RELEASED"}));}
+\DoxyCodeLine{165         \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{166     \}}
+\DoxyCodeLine{167     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{168     \{}
+\DoxyCodeLine{169         Serial.println(F(\textcolor{stringliteral}{"LEFT AND RIGHT BUTTON'S RELEASED"}));}
+\DoxyCodeLine{170         \textcolor{keywordflow}{return} 3;}
+\DoxyCodeLine{171     \}}
+\DoxyCodeLine{172 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_ae8eb2734e7793d3ad9a340fcb50e9f77}\label{class_cerebro_ae8eb2734e7793d3ad9a340fcb50e9f77}} 
+\index{Cerebro@{Cerebro}!ButtonState@{ButtonState}}
+\index{ButtonState@{ButtonState}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{ButtonState()}{ButtonState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily byte Cerebro\+::\+Button\+State (\begin{DoxyParamCaption}\item[{char}]{Whichbutton }\end{DoxyParamCaption})}
+
+
+
+Lee el estado actual del boton. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Whichbutton} & seleccion de boton \+: \textquotesingle{}l\textquotesingle{} para sensor izquierdo \textquotesingle{}r\textquotesingle{} para el sensor derecho \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+byte regresa 1 si el boton esta presionado, 0 si el botón no esta presionado 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136 \{}
+\DoxyCodeLine{137     \textcolor{keywordtype}{byte} readState =  (Whichbutton == \textcolor{charliteral}{'l'}) ? ((PIND \& B00000100)>>2) : ((PIND \& B00001000)>>3);}
+\DoxyCodeLine{138     \textcolor{keywordflow}{if} (readState == 1 ) \{Serial.println(F(\textcolor{stringliteral}{"BUTTON PRESSED"}));\}}
+\DoxyCodeLine{139     \textcolor{keywordflow}{else}\{ Serial.println(F(\textcolor{stringliteral}{"BUTTON RELEASED"}));\}}
+\DoxyCodeLine{140     \textcolor{keywordflow}{return} readState ;}
+\DoxyCodeLine{141 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a6006422a003beb53dd25de5c4adb895b}\label{class_cerebro_a6006422a003beb53dd25de5c4adb895b}} 
+\index{Cerebro@{Cerebro}!CerebroInit@{CerebroInit}}
+\index{CerebroInit@{CerebroInit}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{CerebroInit()}{CerebroInit()}}
+{\footnotesize\ttfamily void Cerebro\+::\+Cerebro\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa todos los componentes de arduino. 
+
+
+
+Definition at line 30 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                          \{}
+\DoxyCodeLine{31     DDRD = B00110000;        }
+\DoxyCodeLine{32     DDRB = B00011111;        }
+\DoxyCodeLine{33     DDRC = B00011100;        }
+\DoxyCodeLine{34     DDRD = DDRD | B00110000; }
+\DoxyCodeLine{35     Serial.begin(9600);}
+\DoxyCodeLine{36     m\_servo.attach(servo);}
+\DoxyCodeLine{37     Serial.println(\textcolor{stringliteral}{"inicializado"});}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a82638032be433406d5715dd515826011}\label{class_cerebro_a82638032be433406d5715dd515826011}} 
+\index{Cerebro@{Cerebro}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily uint16\+\_\+t Cerebro\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia del sensor ultrasonico. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Retorna el valor de la distancia calculada en cm rango de 3-\/200 cm 
+\end{DoxyReturn}
+
+
+Definition at line 396 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{396                              \{}
+\DoxyCodeLine{397 }
+\DoxyCodeLine{398   }
+\DoxyCodeLine{399      PORTB = PORTB \& B1111110;}
+\DoxyCodeLine{400      delayMicroseconds(2);}
+\DoxyCodeLine{401      PORTB = PORTB | B0000001;}
+\DoxyCodeLine{402      delayMicroseconds(10);}
+\DoxyCodeLine{403      PORTB = PORTB \& B1111110;}
+\DoxyCodeLine{404      \textcolor{keywordtype}{int} tiempo = pulseIn(echo,1);}
+\DoxyCodeLine{405      \textcolor{keywordtype}{int} distancia = tiempo / 2.0 * 0.0343;}
+\DoxyCodeLine{406      delayMicroseconds(50);}
+\DoxyCodeLine{407      \textcolor{keywordflow}{if} (distancia <= 0 || distancia >= 400) \{}
+\DoxyCodeLine{408         \textcolor{keywordflow}{return} 0 ;}
+\DoxyCodeLine{409     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{410 }
+\DoxyCodeLine{411      Serial.print(\textcolor{stringliteral}{"DISTANCIA: "});}
+\DoxyCodeLine{412      Serial.println(distancia);}
+\DoxyCodeLine{413         \textcolor{keywordflow}{return} distancia;}
+\DoxyCodeLine{414     \}}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a93dfcfd5ed57f573a5ad24c662779a2c}\label{class_cerebro_a93dfcfd5ed57f573a5ad24c662779a2c}} 
+\index{Cerebro@{Cerebro}!lightSensor@{lightSensor}}
+\index{lightSensor@{lightSensor}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{lightSensor()}{lightSensor()}}
+{\footnotesize\ttfamily float Cerebro\+::light\+Sensor (\begin{DoxyParamCaption}\item[{char}]{Which\+Sensor }\end{DoxyParamCaption})}
+
+
+
+Retorna el valor del sensor L\+DR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Which\+Sensor} & Selecciona de que sensor quieres tomar la lectura \textquotesingle{}l\textquotesingle{} para izquierdo \textquotesingle{}r\textquotesingle{} para derecho \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float regresa el valor promedio de el L\+DR seleccionado 
+\end{DoxyReturn}
+
+
+Definition at line 261 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{262 \{}
+\DoxyCodeLine{263     \textcolor{keywordtype}{float} averange = 0;}
+\DoxyCodeLine{264     \textcolor{keywordflow}{if} (WhichSensor == \textcolor{charliteral}{'l'})}
+\DoxyCodeLine{265     \{}
+\DoxyCodeLine{266         this-\/>Averange(A0, \&averange);}
+\DoxyCodeLine{267     \}}
+\DoxyCodeLine{268     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{269     \{}
+\DoxyCodeLine{270         this-\/>Averange(A1, \&averange);}
+\DoxyCodeLine{271     \}}
+\DoxyCodeLine{272     Serial.print(F(\textcolor{stringliteral}{"LDR VALUE ["}));}
+\DoxyCodeLine{273     Serial.print(WhichSensor);}
+\DoxyCodeLine{274     Serial.print(F(\textcolor{stringliteral}{"]:  "}));}
+\DoxyCodeLine{275     Serial.println(averange);}
+\DoxyCodeLine{276     \textcolor{keywordflow}{return} averange;}
+\DoxyCodeLine{277 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_af3ca7b007eb2a1c771787a4d54463a1b}\label{class_cerebro_af3ca7b007eb2a1c771787a4d54463a1b}} 
+\index{Cerebro@{Cerebro}!lineSensor@{lineSensor}}
+\index{lineSensor@{lineSensor}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{lineSensor()}{lineSensor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily byte Cerebro\+::line\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Realiza la lectura de los dos sensores de seguidor de linea. 
+
+\begin{DoxyReturn}{Returns}
+byte Retorna en el estado en el que se encuentrán los sensores 
+\end{DoxyReturn}
+
+
+Definition at line 191 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{192 \{}
+\DoxyCodeLine{193     \textcolor{keywordtype}{byte} leftState = PIND \& B01000000;}
+\DoxyCodeLine{194     \textcolor{keywordtype}{byte} rightState = PIND \& B10000000;}
+\DoxyCodeLine{195     \textcolor{keywordflow}{if} (leftState \&\& rightState)}
+\DoxyCodeLine{196     \{}
+\DoxyCodeLine{197         Serial.println(F(\textcolor{stringliteral}{"LEFT AND RIGH SENSORS IN WHITE LINE"}));}
+\DoxyCodeLine{198         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{199     \}}
+\DoxyCodeLine{200     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (leftState \&\& !rightState)}
+\DoxyCodeLine{201     \{}
+\DoxyCodeLine{202         Serial.println(F(\textcolor{stringliteral}{"RIGHT SENSOR IN BLACK LINE"}));}
+\DoxyCodeLine{203         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{204     \}}
+\DoxyCodeLine{205     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!leftState \&\& rightState)}
+\DoxyCodeLine{206     \{}
+\DoxyCodeLine{207         Serial.println(F(\textcolor{stringliteral}{"LEFT SENSOR IN BLACK  LINE"}));}
+\DoxyCodeLine{208         \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{209     \}}
+\DoxyCodeLine{210     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{211     \{}
+\DoxyCodeLine{212         Serial.println(F(\textcolor{stringliteral}{"BOTH SENSORS IN BLACK LINE"}));}
+\DoxyCodeLine{213         \textcolor{keywordflow}{return} 3;}
+\DoxyCodeLine{214     \}}
+\DoxyCodeLine{215 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a0f87a7f70088bb5ef7f4eadcb792c9fb}\label{class_cerebro_a0f87a7f70088bb5ef7f4eadcb792c9fb}} 
+\index{Cerebro@{Cerebro}!lineSensor@{lineSensor}}
+\index{lineSensor@{lineSensor}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{lineSensor()}{lineSensor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily byte Cerebro\+::line\+Sensor (\begin{DoxyParamCaption}\item[{char}]{Which\+Sensor }\end{DoxyParamCaption})}
+
+
+
+Realiza la lectura de un sensor de seguidor de linea. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Which\+Sensor} & Selección del sensor \textquotesingle{}l\textquotesingle{} para izquierdo y \textquotesingle{}r\textquotesingle{} para derecho \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+byte Regresa 0 si esta en línea blanca y 1 si se encuentra en línea negra 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{180 \{}
+\DoxyCodeLine{181     \textcolor{keywordtype}{byte} readState = (WhichSensor == \textcolor{charliteral}{'l'}) ? (PIND \& B01000000)>>6 : (PIND \& B10000000)>>7;}
+\DoxyCodeLine{182     \textcolor{keywordflow}{if} (readState == 0 )\{ Serial.println(F(\textcolor{stringliteral}{"WHITE LINE"})) ;\}}
+\DoxyCodeLine{183     \textcolor{keywordflow}{else} \{Serial.println(F(\textcolor{stringliteral}{"BLACK LINE"}));\}}
+\DoxyCodeLine{184     \textcolor{keywordflow}{return} readState;}
+\DoxyCodeLine{185 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a5871c686e15acba38cb4fe9276394992}\label{class_cerebro_a5871c686e15acba38cb4fe9276394992}} 
+\index{Cerebro@{Cerebro}!Melody@{Melody}}
+\index{Melody@{Melody}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{Melody()}{Melody()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Cerebro\+::\+Melody (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cerebro_8h_ab4ee4bde980695447952da7a033b5fb8}{piano\+\_\+sound}} $\ast$}]{melody,  }\item[{int $\ast$}]{sound\+Time,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Funcion para reproducir n cantidad de sonidos en n determinado tiempo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em melody} & arreglo de sonidos \\
+\hline
+{\em sound\+Time} & arreglo de tiempos de reproducción del sonido \\
+\hline
+{\em size} & tamaño de arreglo n \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48     \textcolor{keywordtype}{int} size\_melody = size;}
+\DoxyCodeLine{49     \textcolor{keywordtype}{int} size\_soundTime = size;}
+\DoxyCodeLine{50     \textcolor{keywordflow}{if} (size\_melody == size\_soundTime)}
+\DoxyCodeLine{51     \{}
+\DoxyCodeLine{52         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} thisNote = 0; thisNote < size\_melody; thisNote++)}
+\DoxyCodeLine{53         \{}
+\DoxyCodeLine{54             }
+\DoxyCodeLine{55             \textcolor{keywordtype}{int} noteDuration = 1000 / *(soundTime + thisNote);}
+\DoxyCodeLine{56             tone(\mbox{\hyperlink{cerebro_8h_ae063708dcb4d38cf311edf254f63e333}{buzzer}}, *(melody + thisNote), noteDuration);}
+\DoxyCodeLine{57             \textcolor{keywordtype}{int} pauseBetweenNotes = noteDuration * 1.30;}
+\DoxyCodeLine{58             delay(pauseBetweenNotes);}
+\DoxyCodeLine{59             noTone(\mbox{\hyperlink{cerebro_8h_ae063708dcb4d38cf311edf254f63e333}{buzzer}});}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{63     \{}
+\DoxyCodeLine{64         Serial.println(F(\textcolor{stringliteral}{"WARNING: THE SIZE OF THE MELODY ARRAY AND SOUND TIME ARRAY MUST BE THE SAME"}));}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a5e9a4d8bb0c6318c194819f2949b8fed}\label{class_cerebro_a5e9a4d8bb0c6318c194819f2949b8fed}} 
+\index{Cerebro@{Cerebro}!Melody@{Melody}}
+\index{Melody@{Melody}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{Melody()}{Melody()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Cerebro\+::\+Melody (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cerebro_8h_ab4ee4bde980695447952da7a033b5fb8}{piano\+\_\+sound}}}]{melody,  }\item[{uint16\+\_\+t}]{sound\+Time }\end{DoxyParamCaption})}
+
+
+
+Reproduce un solo sonido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em melody} & sonido \\
+\hline
+{\em sound\+Time} & tiempo de reproducción del sonido \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     \textcolor{keywordtype}{int} noteDuration = 1000 / soundTime;}
+\DoxyCodeLine{76     tone(\mbox{\hyperlink{cerebro_8h_ae063708dcb4d38cf311edf254f63e333}{buzzer}}, melody, noteDuration);}
+\DoxyCodeLine{77     \textcolor{keywordtype}{int} pauseBetweenNotes = noteDuration * 1.30;}
+\DoxyCodeLine{78     delay(pauseBetweenNotes);}
+\DoxyCodeLine{79     noTone(\mbox{\hyperlink{cerebro_8h_ae063708dcb4d38cf311edf254f63e333}{buzzer}});}
+\DoxyCodeLine{80 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a39af91c3afd1a02dff2a74cc18b322a0}\label{class_cerebro_a39af91c3afd1a02dff2a74cc18b322a0}} 
+\index{Cerebro@{Cerebro}!moveMotor@{moveMotor}}
+\index{moveMotor@{moveMotor}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{moveMotor()}{moveMotor()}}
+{\footnotesize\ttfamily void Cerebro\+::move\+Motor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cerebro_8h_a770f026207c141e801703c7149638a2e}{\+\_\+motor}}}]{Motor,  }\item[{\mbox{\hyperlink{cerebro_8h_a2cd9a3bc9704bd057232711cd8a3ed19}{motor\+\_\+direction}}}]{Direction,  }\item[{uint32\+\_\+t}]{time }\end{DoxyParamCaption})}
+
+
+
+Mueve un solo motor a la dirección especificada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Motor} & M1 para motor izquierdo M2 para motor derecho \\
+\hline
+{\em Direction} & Dirección a la que quieras que tu motor se mueva Forward, Backward, Stop \\
+\hline
+{\em time} & tiempo de encendido, 0 para no afectar tus algoritmos \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 286 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{287 \{}
+\DoxyCodeLine{288     }
+\DoxyCodeLine{289     \textcolor{keywordflow}{if} (Motor == 1)}
+\DoxyCodeLine{290     \{}
+\DoxyCodeLine{291         \textcolor{keywordflow}{if} (Direction == 1)}
+\DoxyCodeLine{292         \{ \textcolor{comment}{//FORWARD}}
+\DoxyCodeLine{293             PORTB = B00010000;}
+\DoxyCodeLine{294             PORTC = B00000000;}
+\DoxyCodeLine{295         \}}
+\DoxyCodeLine{296         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (Direction == 2)}
+\DoxyCodeLine{297         \{ \textcolor{comment}{//BACKWARD}}
+\DoxyCodeLine{298             PORTB = B00000000;}
+\DoxyCodeLine{299             PORTC = B00100000;}
+\DoxyCodeLine{300         \}}
+\DoxyCodeLine{301         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{302         \{ \textcolor{comment}{//STOP}}
+\DoxyCodeLine{303             PORTB = B00000000;}
+\DoxyCodeLine{304             PORTC = B00000000;}
+\DoxyCodeLine{305         \}}
+\DoxyCodeLine{306     \}}
+\DoxyCodeLine{307     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (Motor == 2)}
+\DoxyCodeLine{308     \{}
+\DoxyCodeLine{309         \textcolor{keywordflow}{if} (Direction == 1)}
+\DoxyCodeLine{310         \{ \textcolor{comment}{//FORWARD}}
+\DoxyCodeLine{311             PORTB = B00000000;}
+\DoxyCodeLine{312             PORTC = B00001000;}
+\DoxyCodeLine{313         \}}
+\DoxyCodeLine{314         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (Direction == 2)}
+\DoxyCodeLine{315         \{ \textcolor{comment}{//BACKWARD}}
+\DoxyCodeLine{316             PORTB = B00000000;}
+\DoxyCodeLine{317             PORTC = B00010000;}
+\DoxyCodeLine{318         \}}
+\DoxyCodeLine{319         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{320         \{ \textcolor{comment}{//STOP}}
+\DoxyCodeLine{321             PORTB = B00000000;}
+\DoxyCodeLine{322             PORTC = B00000000;}
+\DoxyCodeLine{323         \}}
+\DoxyCodeLine{324     \}}
+\DoxyCodeLine{325     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{326     \{}
+\DoxyCodeLine{327         PORTB = B00000001;}
+\DoxyCodeLine{328         PORTC = B00000000;}
+\DoxyCodeLine{329         Serial.println(F(\textcolor{stringliteral}{"MOTOR DOESNT EXISTS :C "}));}
+\DoxyCodeLine{330     \}}
+\DoxyCodeLine{331     delay(time);}
+\DoxyCodeLine{332 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a9e7975af84b48b0cb000b25e3e43ec5b}\label{class_cerebro_a9e7975af84b48b0cb000b25e3e43ec5b}} 
+\index{Cerebro@{Cerebro}!moveTank@{moveTank}}
+\index{moveTank@{moveTank}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{moveTank()}{moveTank()}}
+{\footnotesize\ttfamily void Cerebro\+::move\+Tank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cerebro_8h_a2cd9a3bc9704bd057232711cd8a3ed19}{motor\+\_\+direction}}}]{Direction,  }\item[{uint32\+\_\+t}]{time }\end{DoxyParamCaption})}
+
+
+
+Mueve los dos motores de \mbox{\hyperlink{class_cerebro}{Cerebro}} a la dirección especificada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Direction} & Dirección a la que quieras que tu motor se mueva Forward, Backward, Left, Right , Stop \\
+\hline
+{\em time} & tiempo de encendido, 0 para no afectar tus algoritmos \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 339 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{340 \{}
+\DoxyCodeLine{341     \textcolor{keywordflow}{switch} (Direction)}
+\DoxyCodeLine{342     \{}
+\DoxyCodeLine{343         \textcolor{keywordflow}{case} 1: \textcolor{comment}{// forward}}
+\DoxyCodeLine{344             PORTB = B00010000;}
+\DoxyCodeLine{345             PORTC = B00001000;}
+\DoxyCodeLine{346             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{347         \textcolor{keywordflow}{case} 2: \textcolor{comment}{//backward}}
+\DoxyCodeLine{348             PORTB = B00000000;}
+\DoxyCodeLine{349             PORTC = B00110000;}
+\DoxyCodeLine{350             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{351         \textcolor{keywordflow}{case} 3: \textcolor{comment}{//stop}}
+\DoxyCodeLine{352             PORTB = 0x01;}
+\DoxyCodeLine{353             PORTC = 0X00;}
+\DoxyCodeLine{354             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{355         \textcolor{keywordflow}{case} 4: \textcolor{comment}{//left}}
+\DoxyCodeLine{356             PORTB = B00010000;}
+\DoxyCodeLine{357             PORTC = B00010000;}
+\DoxyCodeLine{358             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{359         \textcolor{keywordflow}{case} 5:\textcolor{comment}{//right}}
+\DoxyCodeLine{360             PORTB = B00000000;}
+\DoxyCodeLine{361             PORTC = B00101000;}
+\DoxyCodeLine{362             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{363             }
+\DoxyCodeLine{364         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{365             Serial.println(F(\textcolor{stringliteral}{"DIRECTION DOESNT EXISTS :C "}));}
+\DoxyCodeLine{366             PORTB = 0x01;}
+\DoxyCodeLine{367             PORTC = 0X00;}
+\DoxyCodeLine{368             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{369     \}}
+\DoxyCodeLine{370     delay(time);}
+\DoxyCodeLine{371 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a184a949a6beb58d09c4f564cdcdab995}\label{class_cerebro_a184a949a6beb58d09c4f564cdcdab995}} 
+\index{Cerebro@{Cerebro}!RGBcolor@{RGBcolor}}
+\index{RGBcolor@{RGBcolor}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{RGBcolor()}{RGBcolor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Cerebro\+::\+R\+G\+Bcolor (\begin{DoxyParamCaption}\item[{byte}]{r,  }\item[{byte}]{g,  }\item[{byte}]{b,  }\item[{uint16\+\_\+t}]{time }\end{DoxyParamCaption})}
+
+
+
+Crea un color especifico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & valor de color rojo entre 0-\/255 \\
+\hline
+{\em g} & valor de color verde entre 0-\/255 \\
+\hline
+{\em b} & valor de color azul entre 0-\/255 \\
+\hline
+{\em time} & tiempo de encendido, 0 para no afectar tus algoritmos \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 225 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{226 \{}
+\DoxyCodeLine{227     \textcolor{keywordflow}{if} (r >= 0 \&\& r <= 255 \&\& g >= 0 \&\& g <= 255 \&\& b >= 0 \&\& b <= 255)}
+\DoxyCodeLine{228     \{}
+\DoxyCodeLine{229         }
+\DoxyCodeLine{230         analogWrite(B00001011, r);}
+\DoxyCodeLine{231         analogWrite(B00001010, g);}
+\DoxyCodeLine{232         analogWrite(B00001001, b);}
+\DoxyCodeLine{233         delay(time);}
+\DoxyCodeLine{234     \}}
+\DoxyCodeLine{235     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{236     \{}
+\DoxyCodeLine{237         Serial.println(F(\textcolor{stringliteral}{"WARNING: THE RGB VALUE MUST BE BETWEEN 0-\/255"}));}
+\DoxyCodeLine{238     \}}
+\DoxyCodeLine{239 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a6444ccaed9ab75b62e66afe248dc4909}\label{class_cerebro_a6444ccaed9ab75b62e66afe248dc4909}} 
+\index{Cerebro@{Cerebro}!RGBcolor@{RGBcolor}}
+\index{RGBcolor@{RGBcolor}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{RGBcolor()}{RGBcolor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Cerebro\+::\+R\+G\+Bcolor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cerebro_8h_a058819ab74dd58da046f0ff682ac9c71}{rgb\+\_\+color}}}]{hex\+\_\+\+R\+GB,  }\item[{uint16\+\_\+t}]{time }\end{DoxyParamCaption})}
+
+
+
+Utiliza colores que definimos para ti Blue,Red, etc... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+\_\+\+R\+GB} & Nombre de los colores definidos para ti \\
+\hline
+{\em time} & tiempo de encendido, 0 para no afectar tus algoritmos \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 247 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{248 \{}
+\DoxyCodeLine{249     analogWrite(B00001011, (hex\_RGB \& 0xFF0000) >> 16);}
+\DoxyCodeLine{250     analogWrite(B00001010, (hex\_RGB \& 0x00FF00) >> 8);}
+\DoxyCodeLine{251     analogWrite(B00001001, hex\_RGB \& 0x0000FF);}
+\DoxyCodeLine{252     delay(time);}
+\DoxyCodeLine{253     }
+\DoxyCodeLine{254 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_a1f6a62be8a04c991d3d4d320f34a64cb}\label{class_cerebro_a1f6a62be8a04c991d3d4d320f34a64cb}} 
+\index{Cerebro@{Cerebro}!ServoRadar@{ServoRadar}}
+\index{ServoRadar@{ServoRadar}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{ServoRadar()}{ServoRadar()}}
+{\footnotesize\ttfamily void Cerebro\+::\+Servo\+Radar (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time }\end{DoxyParamCaption})}
+
+
+
+Mueve el servomotor en angulo de 0 a 180 y de 180 a 0 en un determinado tiempo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & tiempo que tardara en mover cada angulo \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{114 \{}
+\DoxyCodeLine{115     \textcolor{keywordflow}{for} (int16\_t i = 0; i <= 180; i++)}
+\DoxyCodeLine{116     \{}
+\DoxyCodeLine{117         m\_servo.write(i);}
+\DoxyCodeLine{118         delay(time);}
+\DoxyCodeLine{119         Serial.println(i);}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121     \textcolor{keywordflow}{for} (int16\_t i = 180; i >= 0; i-\/-\/)}
+\DoxyCodeLine{122     \{}
+\DoxyCodeLine{123         m\_servo.write(i);}
+\DoxyCodeLine{124         delay(time);}
+\DoxyCodeLine{125          Serial.println(i);}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127     }
+\DoxyCodeLine{128 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cerebro_ab11f31244fbcbd05eb8aba9eb7fc8e81}\label{class_cerebro_ab11f31244fbcbd05eb8aba9eb7fc8e81}} 
+\index{Cerebro@{Cerebro}!StopMelody@{StopMelody}}
+\index{StopMelody@{StopMelody}!Cerebro@{Cerebro}}
+\doxysubsubsection{\texorpdfstring{StopMelody()}{StopMelody()}}
+{\footnotesize\ttfamily void Cerebro\+::\+Stop\+Melody (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Detiene el sonido (silenciar) 
+
+
+
+Definition at line 86 of file cerebro.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                         \{}
+\DoxyCodeLine{87     noTone(\mbox{\hyperlink{cerebro_8h_ae063708dcb4d38cf311edf254f63e333}{buzzer}});}
+\DoxyCodeLine{88     DDRB = DDRB \& B11101111;}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cerebro_8h}{cerebro.\+h}}\item 
+\mbox{\hyperlink{cerebro_8cpp}{cerebro.\+cpp}}\end{DoxyCompactItemize}
